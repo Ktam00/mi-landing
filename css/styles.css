@@ -65,10 +65,31 @@ nav ul li a:hover {
 }
 
 #hero {
-    background-color: var(--color-primario);
+    background-image: url('../img/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: var(--color-blanco);
     text-align: center;
-    padding: 50px 32px;
+    padding: 100px 32px;
+    position: relative;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#hero h1,
+#hero p,
+#hero a {
+    position: relative;
+    z-index: 1;
 }
 
 #hero h1 {
@@ -106,7 +127,7 @@ nav ul li a:hover {
 
 #beneficios h2 {
     font-size: 36px;
-    color:hsl(from color h s l)
+    color:hsl(from color h s l);
     margin-bottom: 40px;
 }
 
@@ -313,4 +334,57 @@ footer p {
         padding: 12px 24px;
     }
 }
+/* ── ANIMACIONES ── */
 
+/* Botón con transición suave */
+.btn {
+    transition: background-color 0.3s ease,
+                transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #d4920a;
+    transform: scale(1.05);
+}
+
+/* Tarjetas se elevan al pasar el mouse */
+.cards article {
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.cards article:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Links del menú con transición */
+nav ul li a {
+    transition: color 0.2s ease;
+}
+/* Animación de aparición desde abajo */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplicar animación al hero */
+#hero h1 {
+    animation: aparecer 0.8s ease forwards;
+}
+
+#hero p {
+    animation: aparecer 0.8s ease 0.2s forwards;
+    opacity: 0;
+}
+
+#hero a {
+    animation: aparecer 0.8s ease 0.4s forwards;
+    opacity: 0;
+}
