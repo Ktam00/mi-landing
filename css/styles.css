@@ -1,0 +1,316 @@
+:root {
+    --color-primario: #2e7d5e;
+    --color-secundario:#f4f9f6;
+    --color-texto: #333333;
+    --color-blanco: #ffffff;
+    --color-acento: #f0a500;
+    --fuente-principal: 'Segoe UI', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    font-size: 18px;
+    color: var(--color-texto);
+    background-color: var(--color-blanco);
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul{
+    list-style: none;
+}
+
+header {
+    background-color: var(--color-primario);
+    padding: 16px 32px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--color-blanco);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    gap: 24px;
+}
+
+nav ul li a {
+    color: var(--color-blanco);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: var(--color-acento);
+}
+
+#hero {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 50px 32px;
+}
+
+#hero h1 {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+#hero p {
+    font-size: 20px;
+    margin-bottom: 32px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    background-color: var(--color-acento);
+    color: var(--color-blanco);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #d4020a;
+}
+
+#beneficios {
+    background-color: var(--color-secundario);
+    padding: 80px 32px;
+    text-align: center;
+}
+
+#beneficios h2 {
+    font-size: 36px;
+    color:hsl(from color h s l)
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: felx;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.cards article {
+    background-color: var(--color-blanco);
+    padding: 32px;
+    border-radius: 12px;
+    width: 280px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.cards article h3 {
+    font-size: 22px;
+    color: var(--color-primario);
+    margin-bottom: 12px;
+}
+
+.cards article p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#testimonios {
+    background-color: var(--color-blanco);
+    padding: 80px 32px;
+    text-align: center;
+}
+
+#testimonios h2 {
+    font-size: 36px;
+    color: var(--color-primario);
+    margin-bottom: 48px;
+}
+
+.testimonios-grid {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.testimonio {
+    background-color: var(--color-secundario);
+    padding: 32px;
+    border-radius: 12px;
+    width: 340px;
+    border-left: 6px solid var(--color-primario);
+}
+
+.testimonio p {
+    font-size: 17px;
+    line-height: 1.7;
+    font-style: italic;
+    color: var(--color-texto);
+    margin-bottom: 16px;
+}
+
+.testimonio h4 {
+    font-size: 16px;
+    color: var(--color-primario);
+    font-weight: bold;
+}
+
+/* ── CONTACTO ── */
+#contacto {
+    background-color: var(--color-secundario);
+    padding: 80px 32px;
+    text-align: center;
+}
+
+#contacto h2 {
+    font-size: 36px;
+    color: var(--color-primario);
+    margin-bottom: 16px;
+}
+
+#contacto p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: var(--color-texto);
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: left;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-texto);
+}
+
+input,
+textarea {
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 2px solid #cccccc;
+    border-radius: 8px;
+    width: 100%;
+    font-family: var(--fuente-principal);
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--color-primario);
+    outline: none;
+}
+
+textarea {
+    height: 140px;
+    resize: vertical;
+}
+/* ── FOOTER ── */
+footer {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 40px 32px;
+}
+
+footer p {
+    font-size: 16px;
+    line-height: 2;
+}
+
+/* ── RESPONSIVE DESIGN ── */
+
+/* Tablet: pantallas menores a 768px */
+@media (max-width: 768px) {
+
+    #hero h1 {
+        font-size: 36px;
+    }
+
+    #hero p {
+        font-size: 18px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards article {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .testimonios-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonio {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    nav ul {
+        gap: 12px;
+    }
+}
+
+/* Celular: pantallas menores a 480px */
+@media (max-width: 480px) {
+
+    header {
+        padding: 12px 16px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    #hero {
+        padding: 60px 16px;
+    }
+
+    #hero h1 {
+        font-size: 28px;
+    }
+
+    #beneficios,
+    #testimonios,
+    #contacto {
+        padding: 60px 16px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+}
+
